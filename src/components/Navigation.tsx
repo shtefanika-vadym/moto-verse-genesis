@@ -8,11 +8,13 @@ const Navigation = () => {
   
   // Safe useLocation with error handling
   let location;
+  let hasRouterContext = true;
   try {
     location = useLocation();
   } catch (error) {
     // Fallback if router context is not available
     location = { pathname: "/" };
+    hasRouterContext = false;
   }
 
   const navItems = [
@@ -26,22 +28,38 @@ const Navigation = () => {
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Safe navigation component that handles missing router context
+  const SafeNavLink = ({ to, children, className }: { to: string; children: React.ReactNode; className?: string }) => {
+    if (hasRouterContext) {
+      return (
+        <Link to={to} className={className}>
+          {children}
+        </Link>
+      );
+    }
+    return (
+      <a href={to} className={className}>
+        {children}
+      </a>
+    );
+  };
+
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link 
+          <SafeNavLink 
             to="/" 
             className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-transform"
           >
             MotoTheme
-          </Link>
+          </SafeNavLink>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link
+              <SafeNavLink
                 key={item.path}
                 to={item.path}
                 className={`px-3 py-2 text-sm font-medium transition-all duration-300 ${
@@ -51,7 +69,7 @@ const Navigation = () => {
                 }`}
               >
                 {item.name}
-              </Link>
+              </SafeNavLink>
             ))}
           </div>
 
@@ -73,18 +91,19 @@ const Navigation = () => {
           <div className="md:hidden bg-card border-t border-border">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
-                <Link
+                <SafeNavLink
                   key={item.path}
                   to={item.path}
-                  onClick={() => setIsOpen(false)}
                   className={`block px-3 py-2 text-base font-medium transition-colors ${
                     isActive(item.path)
                       ? "text-primary bg-primary/10"
                       : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >
-                  {item.name}
-                </Link>
+                  <span onClick={() => setIsOpen(false)}>
+                    {item.name}
+                  </span>
+                </SafeNavLink>
               ))}
             </div>
           </div>
