@@ -5,7 +5,15 @@ import { Menu, X } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  
+  // Safe useLocation with error handling
+  let location;
+  try {
+    location = useLocation();
+  } catch (error) {
+    // Fallback if router context is not available
+    location = { pathname: "/" };
+  }
 
   const navItems = [
     { name: "Home", path: "/" },
