@@ -1,0 +1,170 @@
+import Navigation from "@/components/Navigation";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react";
+
+const Contact = () => {
+  return (
+    <div className="min-h-screen bg-gradient-dark">
+      <Navigation />
+      
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+            Contact
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Suntem aici pentru tine! Contactează-ne pentru informații, oferte sau programări la service.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+          {/* Contact Info */}
+          <div className="lg:col-span-1">
+            <Card className="bg-card border-border">
+              <CardHeader>
+                <CardTitle className="text-primary">Informații de Contact</CardTitle>
+                <CardDescription>Află cum să ne găsești și să ne contactezi</CardDescription>
+              </CardHeader>
+              <CardContent className="space-y-6">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-5 h-5 text-primary mt-1" />
+                  <div>
+                    <p className="font-semibold text-foreground">Adresa</p>
+                    <p className="text-muted-foreground">Strada Motocicletelor Nr. 123<br />București, România</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <Phone className="w-5 h-5 text-primary mt-1" />
+                  <div>
+                    <p className="font-semibold text-foreground">Telefon</p>
+                    <p className="text-muted-foreground">+40 740 123 456</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <Mail className="w-5 h-5 text-primary mt-1" />
+                  <div>
+                    <p className="font-semibold text-foreground">Email</p>
+                    <p className="text-muted-foreground">contact@mototheme.ro</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start space-x-3">
+                  <Clock className="w-5 h-5 text-primary mt-1" />
+                  <div>
+                    <p className="font-semibold text-foreground">Program</p>
+                    <p className="text-muted-foreground">
+                      Luni - Vineri: 9:00 - 18:00<br />
+                      Sâmbătă: 9:00 - 14:00<br />
+                      Duminică: Închis
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Social Media */}
+            <Card className="bg-card border-border mt-6">
+              <CardHeader>
+                <CardTitle className="text-primary">Urmărește-ne</CardTitle>
+                <CardDescription>Rămâi conectat cu noi pe social media</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex space-x-4">
+                  <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                    <Facebook className="w-4 h-4" />
+                  </Button>
+                  <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                    <Instagram className="w-4 h-4" />
+                  </Button>
+                  <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary/10">
+                    <Youtube className="w-4 h-4" />
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Contact Form */}
+          <div className="lg:col-span-2">
+            <Card className="bg-card border-border">
+              <CardHeader>
+                <CardTitle className="text-primary">Trimite-ne un Mesaj</CardTitle>
+                <CardDescription>Completează formularul și te vom contacta în cel mai scurt timp</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <form className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="nume">Nume *</Label>
+                      <Input id="nume" className="bg-input border-border" placeholder="Numele tău" />
+                    </div>
+                    <div>
+                      <Label htmlFor="prenume">Prenume *</Label>
+                      <Input id="prenume" className="bg-input border-border" placeholder="Prenumele tău" />
+                    </div>
+                  </div>
+                  
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <Label htmlFor="email">Email *</Label>
+                      <Input id="email" type="email" className="bg-input border-border" placeholder="email@exemplu.ro" />
+                    </div>
+                    <div>
+                      <Label htmlFor="telefon">Telefon</Label>
+                      <Input id="telefon" className="bg-input border-border" placeholder="+40 740 123 456" />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="subiect">Subiect</Label>
+                    <Input id="subiect" className="bg-input border-border" placeholder="Despre ce vrei să vorbești?" />
+                  </div>
+                  
+                  <div>
+                    <Label htmlFor="mesaj">Mesaj *</Label>
+                    <Textarea 
+                      id="mesaj" 
+                      className="bg-input border-border min-h-[120px]" 
+                      placeholder="Scrie aici mesajul tău..."
+                    />
+                  </div>
+                  
+                  <Button className="w-full bg-gradient-primary hover:shadow-glow">
+                    Trimite Mesajul
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <Card className="bg-card border-border">
+          <CardHeader>
+            <CardTitle className="text-primary">Locația Noastră</CardTitle>
+            <CardDescription>Vino să ne vizitezi în showroom-ul nostru</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="bg-muted rounded-lg h-96 flex items-center justify-center border border-border">
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
+                <p className="text-muted-foreground mb-4">Hartă interactivă Google Maps</p>
+                <Button className="bg-gradient-primary hover:shadow-glow">
+                  Deschide în Google Maps
+                </Button>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;

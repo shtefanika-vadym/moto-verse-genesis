@@ -4,6 +4,14 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import TipuriMotociclism from "./pages/TipuriMotociclism";
+import Motociclete from "./pages/Motociclete";
+import CFMoto from "./pages/motorcycle-brands/CFMoto";
+import Kawasaki from "./pages/motorcycle-brands/Kawasaki";
+import Yamaha from "./pages/motorcycle-brands/Yamaha";
+import Echipamente from "./pages/Echipamente";
+import Service from "./pages/Service";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,6 +24,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/tipuri-motociclism" element={<TipuriMotociclism />} />
+          <Route path="/motociclete" element={<Motociclete />} />
+          <Route path="/motociclete/cfmoto" element={<CFMoto />} />
+          <Route path="/motociclete/kawasaki" element={<Kawasaki />} />
+          <Route path="/motociclete/yamaha" element={<Yamaha />} />
+          <Route path="/echipamente" element={<Echipamente />} />
+          <Route path="/service" element={<Service />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
