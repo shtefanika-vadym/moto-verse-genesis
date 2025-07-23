@@ -241,7 +241,7 @@ const Contact = () => {
                   rel="noopener noreferrer"
                 >
                   <Button className="bg-gradient-primary hover:shadow-glow">
-                    Deschide în Google Maps 
+                    Deschide în Google Maps
                   </Button>
                 </a>
               </div>
