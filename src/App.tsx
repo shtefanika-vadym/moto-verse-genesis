@@ -13,6 +13,9 @@ import Echipamente from "./pages/Echipamente";
 import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Helmets from "./pages/echipamente-brands/Helmets";
+import Gear from "./pages/echipamente-brands/Haine";
+import Apparel from "./pages/echipamente-brands/Haine";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,9 @@ const App = () => (
           <Route path="/motociclete/cfmoto" element={<CFMoto />} />
           <Route path="/motociclete/kawasaki" element={<Kawasaki />} />
           <Route path="/motociclete/yamaha" element={<Yamaha />} />
+          <Route path="/echipamente/casti" element={<Helmets />} />
+          <Route path="/echipamente/haine" element={<Apparel />} />
+          <Route path="/echipamente/manusi-boots" element={<Gear />} />
           <Route path="/echipamente" element={<Echipamente />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
