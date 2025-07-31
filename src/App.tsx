@@ -14,7 +14,7 @@ import Service from "./pages/Service";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Helmets from "./pages/echipamente-brands/Helmets";
-import Gear from "./pages/echipamente-brands/Haine";
+import Gear from "./pages/echipamente-brands/Other";
 import Apparel from "./pages/echipamente-brands/Haine";
 
 const queryClient = new QueryClient();

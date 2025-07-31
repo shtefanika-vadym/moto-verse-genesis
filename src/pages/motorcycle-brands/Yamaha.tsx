@@ -18,9 +18,19 @@ const Yamaha = () => {
       engine: "998cc, 4 cilindri",
       power: "200 CP",
       price: "€17,200",
-      features: ["IMU 6D", "Slide Control", "Launch Control"],
       image:
         "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["IMU 6D", "Slide Control", "Launch Control"],
+    },
+    {
+      name: "YZF-R7",
+      category: "Supersport",
+      engine: "689cc, 2 cilindri",
+      power: "73 CP",
+      price: "€8,800",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Quickshifter", "Traction Control", "Rider Modes"],
     },
     {
       name: "MT-09",
@@ -28,9 +38,53 @@ const Yamaha = () => {
       engine: "889cc, 3 cilindri",
       power: "119 CP",
       price: "€9,500",
-      features: ["Quickshifter", "TCS", "Power Mode"],
       image:
         "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Quickshifter", "TCS", "Power Mode"],
+    },
+    {
+      name: "MT-07",
+      category: "Naked",
+      engine: "689cc, 2 cilindri",
+      power: "74.8 CP",
+      price: "€7,500",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Assist & Slipper Clutch", "LED Lighting", "TFT Display"],
+    },
+    {
+      name: "MT-03",
+      category: "Naked",
+      engine: "321cc, 2 cilindri",
+      power: "42 CP",
+      price: "€4,600",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["ABS", "Compact design", "Beginner-friendly"],
+    },
+    {
+      name: "Tracer 9",
+      category: "Sport Touring",
+      engine: "890cc, 3 cilindri",
+      power: "119 CP",
+      price: "€12,000",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Rider Modes", "Cruise Control", "TFT Display"],
+    },
+    {
+      name: "Tracer 7",
+      category: "Sport Touring",
+      engine: "689cc, 2 cilindri",
+      power: "73 CP",
+      price: "€9,200",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: [
+        "Assist & Slipper Clutch",
+        "Comfortable Ergonomics",
+        "LED Lighting",
+      ],
     },
     {
       name: "Ténéré 700",
@@ -38,9 +92,171 @@ const Yamaha = () => {
       engine: "689cc, 2 cilindri",
       power: "73 CP",
       price: "€10,200",
-      features: ["ABS", "Rally Mode", "LED Lighting"],
       image:
         "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["ABS", "Rally Mode", "LED Lighting"],
+    },
+    {
+      name: "Ténéré 700 World Raid",
+      category: "Adventure",
+      engine: "689cc, 2 cilindri",
+      power: "73 CP",
+      price: "€13,000",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: [
+        "Dual Fuel Tank",
+        "Longer Travel Suspension",
+        "Rally-inspired",
+      ],
+    },
+    {
+      name: "XSR900",
+      category: "Retro",
+      engine: "890cc, 3 cilindri",
+      power: "119 CP",
+      price: "€9,900",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Retro styling", "LED Lights", "Modern suspension"],
+    },
+    {
+      name: "XSR700",
+      category: "Retro",
+      engine: "689cc, 2 cilindri",
+      power: "73 CP",
+      price: "€7,400",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Retro design", "Comfortable ride", "LED Lighting"],
+    },
+    {
+      name: "VMAX",
+      category: "Cruiser",
+      engine: "1679cc, 4 cilindri",
+      power: "200 CP",
+      price: "€21,000",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Muscular styling", "Torque-heavy engine", "Cruiser comfort"],
+    },
+    {
+      name: "V-Star 250",
+      category: "Cruiser",
+      engine: "249cc, 2 cilindri",
+      power: "21.3 CP",
+      price: "€4,000",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Low seat height", "Compact design", "Beginner-friendly"],
+    },
+    {
+      name: "V-Star 650 Custom",
+      category: "Cruiser",
+      engine: "649cc, 2 cilindri",
+      power: "40 CP",
+      price: "€6,700",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Classic cruiser design", "Easy handling", "Comfortable seat"],
+    },
+    {
+      name: "FJR1300",
+      category: "Sport Touring",
+      engine: "1298cc, 4 cilindri",
+      power: "145 CP",
+      price: "€14,500",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: [
+        "Cruise Control",
+        "Comfortable ergonomics",
+        "Advanced electronics",
+      ],
+    },
+    {
+      name: "FZS1000",
+      category: "Naked",
+      engine: "998cc, 4 cilindri",
+      power: "145 CP",
+      price: "€9,200",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Powerful engine", "Sporty performance", "Comfortable ride"],
+    },
+    {
+      name: "SR400",
+      category: "Retro",
+      engine: "399cc, 1 cilindru",
+      power: "24.8 CP",
+      price: "€5,000",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Classic styling", "Easy to ride", "Affordable"],
+    },
+    {
+      name: "YFZ450R",
+      category: "ATV",
+      engine: "449cc, 4 cilindri",
+      power: "44.7 CP",
+      price: "€8,400",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Sporty handling", "Racing-inspired", "Durable suspension"],
+    },
+    {
+      name: "Grizzly 700",
+      category: "ATV",
+      engine: "686cc, 4 cilindri",
+      power: "44.8 CP",
+      price: "€8,800",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["4WD", "Comfortable ride", "Heavy-duty build"],
+    },
+    {
+      name: "Raptor 700R",
+      category: "ATV",
+      engine: "686cc, 4 cilindri",
+      power: "49.6 CP",
+      price: "€9,500",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: [
+        "Sporty design",
+        "Racing performance",
+        "High ground clearance",
+      ],
+    },
+    {
+      name: "Wolverine X4",
+      category: "SxS",
+      engine: "847cc, 3 cilindri",
+      power: "75.6 CP",
+      price: "€16,500",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["4WD", "Off-road capabilities", "Comfortable seating"],
+    },
+    {
+      name: "Wolverine X2",
+      category: "SxS",
+      engine: "847cc, 3 cilindri",
+      power: "75.6 CP",
+      price: "€15,200",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Off-road ready", "Tough build", "Roomy interior"],
+    },
+    {
+      name: "PWT700",
+      category: "SxS",
+      engine: "686cc, 4 cilindri",
+      power: "44.8 CP",
+      price: "€12,500",
+      image:
+        "https://www.webbikeworld.com/wp-content/uploads/2022/12/2023-Yamaha-R1M.jpg",
+      features: ["Compact design", "Efficient engine", "Reliable build"],
     },
   ];
 

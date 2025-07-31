@@ -12,15 +12,6 @@ import { Link } from "react-router-dom";
 const Motociclete = () => {
   const brands = [
     {
-      name: "CFMoto",
-      description:
-        "Motociclete moderne cu tehnologie avansată și prețuri competitive",
-      models: ["NK 650", "MT 650", "Adventure 700"],
-      image:
-        "https://cfmotodealers.co.za/wp-content/uploads/2021/08/CFMOTO_logo_black_stacked_sRGB-1.png",
-      path: "/motociclete/cfmoto",
-    },
-    {
       name: "Kawasaki",
       description:
         "Legendara marcă japoneză, cunoscută pentru performanță și fiabilitate",
@@ -36,6 +27,15 @@ const Motociclete = () => {
       image:
         "https://c.ndtvimg.com/2022-01/65c8jqng_bike_625x300_14_January_22.jpg",
       path: "/motociclete/yamaha",
+    },
+    {
+      name: "CFMoto",
+      description:
+        "Motociclete moderne cu tehnologie avansată și prețuri competitive",
+      models: ["NK 650", "MT 650", "Adventure 700"],
+      image:
+        "https://cfmotodealers.co.za/wp-content/uploads/2021/08/CFMOTO_logo_black_stacked_sRGB-1.png",
+      path: "/motociclete/cfmoto",
     },
   ];
 
@@ -61,11 +61,11 @@ const Motociclete = () => {
               className="bg-card border-border hover:shadow-glow transition-all duration-300 hover:-translate-y-2"
             >
               <CardHeader>
-                <div className="text-6xl mb-4 text-center">
+                <div className="text-6xl mb-4 text-center bg-white ">
                   <img
                     src={brand.image}
                     alt={brand.name}
-                    className="w-full h-48 object-cover rounded-t-lg"
+                    className="w-full h-48 object-contain rounded-t-lg mix-blend-multiply"
                   />
                 </div>
                 <CardTitle className="text-2xl text-center text-primary">
