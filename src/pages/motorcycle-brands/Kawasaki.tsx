@@ -9,14 +9,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
-import moto from "./../../assets/kawa/1000sx.png";
 
 const images = import.meta.glob("/src/assets/kawa/*.png", {
   eager: true,
   import: "default",
 }) as Record<string, string>;
 
-// Creează un obiect cu nume simplificat (ex: 1000sx → /src/assets/kawa/1000sx.png)
 const simplifiedImages: Record<string, string> = {};
 
 Object.entries(images).forEach(([path, src]) => {
@@ -547,7 +545,7 @@ const Kawasaki = () => {
                 </div>
 
                 <Button className="w-full bg-gradient-primary hover:shadow-glow">
-                  Solicită Ofertă
+                  <Link to={"/contact"}>Solicită Ofertă</Link>
                 </Button>
               </CardContent>
             </Card>

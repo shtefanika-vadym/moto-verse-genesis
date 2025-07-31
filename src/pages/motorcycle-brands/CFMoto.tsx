@@ -10,6 +10,22 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const images = import.meta.glob("/src/assets/cfmoto/*.webp", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+
+const simplifiedImages: Record<string, string> = {};
+
+Object.entries(images).forEach(([path, src]) => {
+  const fileName =
+    path
+      .split("/")
+      .pop()
+      ?.replace(/\.[^/.]+$/, "") || "";
+  simplifiedImages[fileName] = src;
+});
+
 const CFMoto = () => {
   const models = [
     {
@@ -19,6 +35,7 @@ const CFMoto = () => {
       power: "Nu se specifică",
       price: "€2,990",
       features: ["Eligibil Rabla", "Inmatriculabil: Da"],
+      image: simplifiedImages["city-sport-jpg-0dnmj-qp5gy-1731593651_500x500"],
       availableFinancing: "Rate de la 414.64 RON",
     },
     {
@@ -28,6 +45,7 @@ const CFMoto = () => {
       power: "15 CP",
       price: "€3,490",
       features: ["ABS", "Inmatriculabil: Da", "Eligibil Rabla"],
+      image: simplifiedImages["cfmoto-125nk-02-jpg-zmija-1731336191_500x500"],
       availableFinancing: "Rate de la 483.14 RON",
     },
     {
@@ -37,6 +55,7 @@ const CFMoto = () => {
       power: "27 CP",
       price: "€3,690",
       features: ["ABS", "Inmatriculabil: Da", "Eligibil Rabla"],
+      image: simplifiedImages["cfmoto-300nk-albastr-vfhcr-1663829512_500x500"],
       availableFinancing: "Rate de la 510.57 RON",
     },
     {
@@ -46,6 +65,7 @@ const CFMoto = () => {
       power: "Nu se specifică",
       price: "€4,490",
       features: ["Inmatriculabil: Da", "Eligibil Rabla"],
+      image: simplifiedImages["cfmoto-300cl-x-02-jp-o4kpm-1737011306_500x500"],
       availableFinancing: "Rate de la 620.28 RON",
     },
     {
@@ -61,6 +81,7 @@ const CFMoto = () => {
         "Inmatriculabil: Da",
         "Eligibil Rabla",
       ],
+      image: simplifiedImages["450nk-zephyr-blue-ri-m8wa4-1705395936_500x500"],
       availableFinancing: "Rate de la 743.70 RON",
     },
     {
@@ -75,6 +96,7 @@ const CFMoto = () => {
         "Inmatriculabil: Da",
         "Eligibil Rabla",
       ],
+      image: simplifiedImages["cfmoto-450sr-alb-jpg-msg1o-1744105401_500x500"],
       availableFinancing: "Rate de la 798.56 RON",
     },
     {
@@ -89,6 +111,7 @@ const CFMoto = () => {
         "Inmatriculabil: Da",
         "Eligibil Rabla",
       ],
+      image: simplifiedImages["450mt-zephyr-blue-ri-bkxmb-1705400831_500x500"],
       availableFinancing: "Rate de la 825.98 RON",
     },
     {
@@ -103,6 +126,7 @@ const CFMoto = () => {
         "Inmatriculabil: Da",
         "Eligibil Rabla",
       ],
+      image: simplifiedImages["cfmoto-700-cl-x-heri-hjryk-1737012868_500x500"],
       availableFinancing: "Rate de la 867.13 RON",
     },
     {
@@ -117,6 +141,7 @@ const CFMoto = () => {
         "Inmatriculabil: Da",
         "Eligibil Rabla",
       ],
+      image: simplifiedImages["cfmoto-800mt-sport-j-01kc0-1734002174_500x500"],
       availableFinancing: "Rate de la 1,100.26 RON",
     },
     {
@@ -131,6 +156,7 @@ const CFMoto = () => {
         "Inmatriculabil: Da",
         "Eligibil Rabla",
       ],
+      image: simplifiedImages["cfmoto-675sr-r-01-jp-bfrjg-1733984293_500x500"],
       availableFinancing: "Rate de la 1,100.26 RON",
     },
     {
@@ -145,9 +171,105 @@ const CFMoto = () => {
         "Inmatriculabil: Da",
         "Eligibil Rabla",
       ],
+      image: simplifiedImages["cfmoto-800mt-explore-xionf-1745489802_500x500"],
       availableFinancing: "Rate de la 1,374.53 RON",
     },
+    {
+      name: "CFMOTO 250SR S",
+      category: "Sport",
+      engine: "1 cilindru, 4 timpi, răcit cu lichid",
+      power: "Nu se specifică",
+      price: "€3,990",
+      features: ["ABS", "Inmatriculabil: Da"],
+      image: simplifiedImages["cfmoto-250sr-s-champ-mllgn-1742287114_500x500"],
+    },
+    {
+      name: "CFMOTO 300SR",
+      category: "Sport",
+      engine: "1 cilindru, 4 timpi",
+      power: "Nu se specifică",
+      price: "€4,190",
+      features: ["ABS", "Inmatriculabil: Da"],
+      image: simplifiedImages["cfmoto-300sr-alb-jpg-xcewt-1745487741_500x500"],
+    },
+    {
+      name: "CFMOTO 450CL-C Bobber",
+      category: "Cruiser / Bobber",
+      engine: "2 cilindri, 4 timpi",
+      power: "Nu se specifică",
+      price: "€6,990",
+      features: ["ABS", "Inmatriculabil: Da"],
+      image: simplifiedImages["cfmoto-450cl-c-bobbe-jx5kl-1716792980_500x500"],
+    },
+    {
+      name: "CFMOTO 675NK",
+      category: "Naked",
+      engine: "3 cilindri, 4 timpi",
+      power: "Nu se specifică",
+      price: "€7,490",
+      features: ["ABS", "Inmatriculabil: Da"],
+      image: simplifiedImages["cfmoto-675nk-jpg-n24f1-1731336382_500x500"],
+    },
+    {
+      name: "CFMOTO 700CL-X Adventure",
+      category: "Adventure",
+      engine: "2 cilindri, 4 timpi",
+      power: "Nu se specifică",
+      price: "€7,190",
+      features: ["ABS", "Cruise Control", "Inmatriculabil: Da"],
+      image:
+        simplifiedImages["qfabipua1ic9ypr-cfmoto-700clx-adventure-d7d_500x500"],
+    },
+    {
+      name: "CFMOTO 700CL-X Sport White",
+      category: "Heritage / Sport",
+      engine: "2 cilindri, 4 timpi",
+      power: "Nu se specifică",
+      price: "€7,390",
+      features: ["ABS", "Cruise Control", "Inmatriculabil: Da"],
+      image:
+        simplifiedImages[
+          "jz0m7nkyv7wzp29-cfmoto-700cl-x-sport-white-78a_500x500"
+        ],
+    },
+    {
+      name: "CFMOTO 700MT ABS",
+      category: "Touring",
+      engine: "2 cilindri, 4 timpi",
+      power: "Nu se specifică",
+      price: "€7,990",
+      features: ["ABS", "Cruise Control", "Inmatriculabil: Da"],
+      image: simplifiedImages["cfmoto-700mt-abs-jpg-4mxoh-1734000836_500x500"],
+    },
+    {
+      name: "CFMOTO 800MT X",
+      category: "Touring/Travel",
+      engine: "2 cilindri, 4 timpi",
+      power: "95 CP",
+      price: "€8,490",
+      features: ["ABS", "Cruise Control", "Inmatriculabil: Da"],
+      image: simplifiedImages["cfmoto-800mt-x-albas-l8qu5-1733325819_500x500"],
+    },
+    {
+      name: "CFMOTO 800NK Advanced",
+      category: "Naked",
+      engine: "2 cilindri, 4 timpi",
+      power: "100 CP",
+      price: "€8,990",
+      features: ["ABS", "Cruise Control", "TFT", "Inmatriculabil: Da"],
+      image: simplifiedImages["cfmoto-800nk-advance-yxzlr-1745486109_500x500"],
+    },
+    {
+      name: "CFMOTO CL-C Euro5",
+      category: "Cruiser",
+      engine: "2 cilindri, 4 timpi",
+      power: "Nu se specifică",
+      price: "€6,590",
+      features: ["ABS", "Cruise Control", "Inmatriculabil: Da"],
+      image: simplifiedImages["clceuro5-2-jpg-hxljt-1751544812_500x500"],
+    },
   ];
+
   return (
     <div className="min-h-screen bg-gradient-dark">
       <Navigation />
@@ -231,7 +353,7 @@ const CFMoto = () => {
                 </div>
 
                 <Button className="w-full bg-gradient-primary hover:shadow-glow">
-                  Solicită Ofertă
+                  <Link to={"/contact"}>Solicită Ofertă</Link>
                 </Button>
               </CardContent>
             </Card>

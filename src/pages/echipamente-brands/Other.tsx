@@ -184,7 +184,7 @@ const Gear = () => {
                 </div>
 
                 <Button className="w-full bg-gradient-primary hover:shadow-glow">
-                  Solicită Ofertă
+                  <Link to={"/contact"}>Solicită Ofertă</Link>
                 </Button>
               </CardContent>
             </Card>
