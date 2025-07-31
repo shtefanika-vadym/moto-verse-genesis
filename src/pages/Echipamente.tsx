@@ -120,7 +120,7 @@ const Echipamente = () => {
               bugetul disponibil.
             </p>
             <Button size="lg" className="bg-gradient-primary hover:shadow-glow">
-              Contactează Specialistul
+              <Link to={"/contact"}> Contactează Specialistul</Link>
             </Button>
           </div>
         </div>

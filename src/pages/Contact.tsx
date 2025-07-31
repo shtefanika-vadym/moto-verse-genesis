@@ -110,30 +110,45 @@ const Contact = () => {
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary/10"
                   >
-                    <Facebook
+                    <a
+                      target="_blank"
                       href="https://www.facebook.com/p/Evyan-Moto-Hub-61573144294639/"
-                      className="w-4 h-4"
-                    />
+                    >
+                      <Facebook
+                        href="https://www.facebook.com/p/Evyan-Moto-Hub-61573144294639/"
+                        className="w-4 h-4"
+                      />
+                    </a>
                   </Button>
                   <Button
                     size="sm"
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary/10"
                   >
-                    <Instagram
+                    <a
+                      target="_blank"
                       href="https://www.instagram.com/evyanmotohub/"
-                      className="w-4 h-4"
-                    />
+                    >
+                      <Instagram
+                        href="https://www.instagram.com/evyanmotohub/"
+                        className="w-4 h-4"
+                      />
+                    </a>
                   </Button>
                   <Button
                     size="sm"
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary/10"
                   >
-                    <Youtube
+                    <a
+                      target="_blank"
                       href="https://www.tiktok.com/@evyan.dealership"
-                      className="w-4 h-4"
-                    />
+                    >
+                      <Youtube
+                        href="https://www.tiktok.com/@evyan.dealership"
+                        className="w-4 h-4"
+                      />
+                    </a>
                   </Button>
                 </div>
               </CardContent>
@@ -188,7 +203,7 @@ const Contact = () => {
                       <Input
                         id="telefon"
                         className="bg-input border-border"
-                        placeholder="+40 740 123 456"
+                        placeholder="+40 740 301 532"
                       />
                     </div>
                   </div>
