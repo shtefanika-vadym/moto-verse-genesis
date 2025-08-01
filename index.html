@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evyan - Moto Hub</title>
+
     <meta
       name="description"
       content="Descoperă lumea motocicletelor cu cele mai bune branduri și echipamente profesionale. CFMoto, Kawasaki, Yamaha și multe altele."
@@ -32,5 +33,15 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      var theme = localStorage.getItem("theme");
+
+      if (!theme) {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        localStorage.setItem("theme", prefersDark ? "dark" : "light");
+      }
+    </script>
   </body>
 </html>

@@ -248,7 +248,7 @@ const Contact = () => {
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                 <p className="text-muted-foreground mb-4">
-                  Hartă interactivă Google Maps
+                  Locatie Google Maps
                 </p>
                 <a
                   href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4734ff8446963367:0x47bdd0a43a6281d8?sa=X&ved=1t:8290&ictx=111"

@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "./../assets/logo.png";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,6 +86,7 @@ const Navigation = () => {
                 {item.name}
               </SafeNavLink>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
@@ -121,6 +123,7 @@ const Navigation = () => {
                   <span onClick={() => setIsOpen(false)}>{item.name}</span>
                 </SafeNavLink>
               ))}
+              <ThemeToggle />
             </div>
           </div>
         )}
