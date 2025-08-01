@@ -14,6 +14,8 @@ import { ArrowRight, Shield, Zap, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
+  const theme = localStorage.getItem("theme") !== "dark";
+
   return (
     <div className="min-h-screen bg-gradient-dark">
       <Navigation />
@@ -27,7 +29,7 @@ const Index = () => {
             backgroundImage: `url(${heroImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            opacity: 0.3,
+            opacity: theme ? 0.9 : 0.3,
           }}
         />
 

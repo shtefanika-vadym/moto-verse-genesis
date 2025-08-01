@@ -16,6 +16,7 @@ import NotFound from "./pages/NotFound";
 import Helmets from "./pages/echipamente-brands/Helmets";
 import Gear from "./pages/echipamente-brands/Other";
 import Apparel from "./pages/echipamente-brands/Haine";
+import AboutUs from "./pages/Despre";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,8 @@ const App = () => (
           <Route path="/echipamente" element={<Echipamente />} />
           <Route path="/service" element={<Service />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/despre-noi" element={<AboutUs />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

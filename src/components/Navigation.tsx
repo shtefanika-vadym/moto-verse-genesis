@@ -27,6 +27,7 @@ const Navigation = () => {
     { name: "Echipamente", path: "/echipamente" },
     { name: "Service", path: "/service" },
     { name: "Contact", path: "/contact" },
+    { name: "Despre noi", path: "/despre-noi" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -56,7 +57,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
