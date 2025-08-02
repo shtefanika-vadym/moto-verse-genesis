@@ -1,15 +1,18 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import logo from "./../assets/logo.png";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   // Safe useLocation with error handling
   let location;
   let hasRouterContext = true;
   try {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     location = useLocation();
   } catch (error) {
     // Fallback if router context is not available
@@ -24,12 +27,21 @@ const Navigation = () => {
     { name: "Echipamente", path: "/echipamente" },
     { name: "Service", path: "/service" },
     { name: "Contact", path: "/contact" },
+    { name: "Despre noi", path: "/despre-noi" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
 
   // Safe navigation component that handles missing router context
-  const SafeNavLink = ({ to, children, className }: { to: string; children: React.ReactNode; className?: string }) => {
+  const SafeNavLink = ({
+    to,
+    children,
+    className,
+  }: {
+    to: string;
+    children: React.ReactNode;
+    className?: string;
+  }) => {
     if (hasRouterContext) {
       return (
         <Link to={to} className={className}>
@@ -45,15 +57,19 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+    <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <SafeNavLink 
-            to="/" 
+          <SafeNavLink
+            to="/"
             className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent hover:scale-105 transition-transform"
           >
-            MotoTheme
+            <img
+              src={logo}
+              alt={"EVYAN"}
+              className="w-60 h-20 object-cover rounded-t-lg"
+            />
           </SafeNavLink>
 
           {/* Desktop Navigation */}
@@ -71,6 +87,7 @@ const Navigation = () => {
                 {item.name}
               </SafeNavLink>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
@@ -81,7 +98,11 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -100,11 +121,10 @@ const Navigation = () => {
                       : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >
-                  <span onClick={() => setIsOpen(false)}>
-                    {item.name}
-                  </span>
+                  <span onClick={() => setIsOpen(false)}>{item.name}</span>
                 </SafeNavLink>
               ))}
+              <ThemeToggle />
             </div>
           </div>
         )}
