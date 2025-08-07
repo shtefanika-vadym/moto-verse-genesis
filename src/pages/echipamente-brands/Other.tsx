@@ -158,12 +158,12 @@ const Gear = () => {
                     <span className="text-muted-foreground">Material:</span>
                     <span className="text-foreground">{item.material}</span>
                   </div>
-                  <div className="flex justify-between">
+                  {/* <div className="flex justify-between">
                     <span className="text-muted-foreground">Preț:</span>
                     <span className="text-primary font-semibold">
                       {item.price}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="mb-6">

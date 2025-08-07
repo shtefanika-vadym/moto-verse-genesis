@@ -171,12 +171,12 @@ const Helmets = () => {
                     <span className="text-muted-foreground">Greutate:</span>
                     <span className="text-foreground">{helmet.weight}</span>
                   </div>
-                  <div className="flex justify-between">
+                  {/* <div className="flex justify-between">
                     <span className="text-muted-foreground">Preț:</span>
                     <span className="text-primary font-semibold">
                       {helmet.price}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="mb-6">

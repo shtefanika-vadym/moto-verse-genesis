@@ -327,12 +327,12 @@ const CFMoto = () => {
                     <span className="text-muted-foreground">Putere:</span>
                     <span className="text-foreground">{model.power}</span>
                   </div>
-                  <div className="flex justify-between">
+                  {/* <div className="flex justify-between">
                     <span className="text-muted-foreground">Preț:</span>
                     <span className="text-primary font-semibold">
                       {model.price}
                     </span>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="mb-6">
