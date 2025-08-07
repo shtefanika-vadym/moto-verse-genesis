@@ -36,7 +36,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
           {/* Contact Info */}
           <div className="lg:col-span-1">
             <Card className="bg-card border-border">
@@ -156,7 +156,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="lg:col-span-2">
+          {/* <div className="lg:col-span-2">
             <Card className="bg-card border-border">
               <CardHeader>
                 <CardTitle className="text-primary">
@@ -232,37 +232,37 @@ const Contact = () => {
                 </form>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
+          <Card className="bg-card border-border">
+            <CardHeader>
+              <CardTitle className="text-primary">Locația Noastră</CardTitle>
+              <CardDescription>
+                Vino să ne vizitezi în showroom-ul nostru
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="bg-muted rounded-lg h-96 flex items-center justify-center border border-border">
+                <div className="text-center">
+                  <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
+                  <p className="text-muted-foreground mb-4">
+                    Locatie Google Maps
+                  </p>
+                  <a
+                    href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4734ff8446963367:0x47bdd0a43a6281d8?sa=X&ved=1t:8290&ictx=111"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="bg-gradient-primary hover:shadow-glow">
+                      Deschide în Google Maps
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Map Section */}
-        <Card className="bg-card border-border">
-          <CardHeader>
-            <CardTitle className="text-primary">Locația Noastră</CardTitle>
-            <CardDescription>
-              Vino să ne vizitezi în showroom-ul nostru
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="bg-muted rounded-lg h-96 flex items-center justify-center border border-border">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                <p className="text-muted-foreground mb-4">
-                  Locatie Google Maps
-                </p>
-                <a
-                  href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4734ff8446963367:0x47bdd0a43a6281d8?sa=X&ved=1t:8290&ictx=111"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="bg-gradient-primary hover:shadow-glow">
-                    Deschide în Google Maps
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </div>
   );
